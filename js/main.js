@@ -1,4 +1,15 @@
- AOS.init({
+// JavaScript para mostrar/ocultar o botão ao rolar a página
+window.onscroll = function() {
+    var button = document.querySelector(".whatsapp-button");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+
+AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
